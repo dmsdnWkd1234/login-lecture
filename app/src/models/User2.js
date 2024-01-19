@@ -2,6 +2,7 @@
 
 const UserStorage = require('./UserStorage');
 
+// test
 class User {
     constructor(body) {
         this.body = body;
