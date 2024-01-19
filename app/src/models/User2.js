@@ -2,15 +2,14 @@
 
 const UserStorage = require('./UserStorage');
 
-// test
 class User {
     constructor(body) {
         this.body = body;
     }
 
-    login() {
+    async login() {
         const client = this.body;
-        const { id, password } = UserStorage.getUserInfo(client.id);
+        const { id, password } = await UserStorage.getUserInfo(client.id);
 
         if (id) {
             if (id === client.id && password === client.password) {
